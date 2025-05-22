@@ -65,9 +65,17 @@ console.log('📦 Extracted Variables:', JSON.stringify(variables, null, 2));
 
 // Step 3: Inject Dynamic Data
 const data = {
-    companyName: 'Apple Inc.',
-    appointmentDay: 'Sunday',
-};
+    "company_name": "Apple Inc.",
+    "form_type": "10-K",
+    "filing_date": "2024-10-25",
+    "cik_number": "0000320193",
+    "filing_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000096/aapl-20240930.htm",
+    "revenue": "394,328,000,000",
+    "net_income": "99,803,000,000",
+    "dividend": "0.96",
+    "risk_factors": "Global economic conditions, supply chain disruptions, dependency on iPhone sales, regulatory changes, and competitive pressures."
+}
+
 const renderedHTML = renderTemplate(template, data);
 
 // Step 4: Inspect/Process Final HTML

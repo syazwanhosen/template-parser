@@ -1,1 +1,100 @@
-<p>Welcome to {{companyName}}. Your appointment is on {{appointmentDay}}.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SEC Filing Summary</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #f9f9f9; }
+    h1, h2 { color: #2c3e50; }
+    .section { margin-bottom: 25px; }
+    .label { font-weight: bold; margin-bottom: 5px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    th {
+      background-color: #e9ecef;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>SEC Filing Summary</h1>
+
+  <div class="section">
+    <div class="label">Company Name:</div>
+    <div>{{company_name}}</div>
+  </div>
+
+  <div class="section">
+    <div class="label">Form Type:</div>
+    <div>{{form_type}}</div>
+  </div>
+
+  <div class="section">
+    <div class="label">Filing Date:</div>
+    <div>{{filing_date}}</div>
+  </div>
+
+  <div class="section">
+    <div class="label">CIK (Central Index Key):</div>
+    <div>{{cik_number}}</div>
+  </div>
+
+  <div class="section">
+    <div class="label">Filing URL:</div>
+    <div><a href="{{filing_url}}" target="_blank">{{filing_url}}</a></div>
+  </div>
+
+  <div class="section">
+    <div class="label">Financial Summary:</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Q1</th>
+          <th>Q2</th>
+          <th>Q3</th>
+          <th>Q4</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Revenue</td>
+          <td>{{revenue}}</td>
+          <td>{{revenue}}</td>
+          <td>{{revenue}}</td>
+          <td>{{revenue}}</td>
+        </tr>
+        <tr>
+          <td>Net Income</td>
+          <td>{{net_income}}</td>
+          <td>{{net_income}}</td>
+          <td>{{net_income}}</td>
+          <td>{{net_income}}</td>
+        </tr>
+        <tr>
+          <td>Dividend</td>
+          <td>{{dividend}}</td>
+          <td>{{dividend}}</td>
+          <td>{{dividend}}</td>
+          <td>{{dividend}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="label">Risk Factors:</div>
+    <p>{{risk_factors}}</p>
+  </div>
+
+</body>
+</html>
